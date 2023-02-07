@@ -1,4 +1,4 @@
-class StudentPlatzi {
+class Student {
     constructor({
       name,
       email,
@@ -20,7 +20,11 @@ class StudentPlatzi {
       this.approvedCourses = approvedCourses;
       this.learningPaths = learningPaths;
     }
-    addApprovedCourses(newApprovedCourses){
-      this.approvedCourses.push(newApprovedCourses)
+    publicarComentario(commentContent) {
+      const comment = new Comment({
+        content: commentContent,
+        studentName: this.name,
+      });
+      comment.publicar();
     }
 }
